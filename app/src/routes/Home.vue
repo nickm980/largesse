@@ -38,6 +38,7 @@
   }
   .description {
     letter-spacing: 5px;
+    line-height: 1;
     opacity: .5;
   }
   p {

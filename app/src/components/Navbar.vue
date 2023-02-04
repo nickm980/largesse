@@ -5,7 +5,7 @@
         </div>
 
         <ul class="links">
-            <li>Food</li>
+            <li><router-link>Food</router-link></li>
             <li>Shelter</li>
             <li>Clothing</li>
             <li>Community Service</li>
@@ -41,7 +41,6 @@ export default {
 .links {
     margin: 0 auto;
     flex: 1;
-    border: 1px solid green;
 }
 .spacer {
     flex: .2;
