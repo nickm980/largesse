@@ -12,3 +12,5 @@ fetch("path/to/file.csv")
             });
         }
     });
+
+export { csvArray };
