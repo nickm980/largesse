@@ -6,6 +6,15 @@
     </nav>
 </template>
 
+<script>
+export default {
+    name: "NavBar",
+    props: {
+        msg: String,
+    },
+};
+</script>
+
 <style>
 .navbar {
     display: flex;

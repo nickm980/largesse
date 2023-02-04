@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="content">
-      <Navbar></Navbar>
+      <NavBar></NavBar>
       <div>
         <h1>NAME</h1>
         <p>A platform to find volunteers and to volunteer in your local neighborhood.</p>
@@ -12,7 +12,7 @@
   </template>
   
   <script>
-  import Navbar from '../components/Navbar.vue';
+  import NavBar from '../components/NavBar.vue';
 
   export default {
     name: 'App',
@@ -20,7 +20,7 @@
       msg: String
     },
     components: {
-      Navbar
+      NavBar
     },
   }
   </script>
