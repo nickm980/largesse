@@ -1,6 +1,12 @@
 <template>
   <div>
-    <router-link to="/about">Home</router-link> |
+    <section class="content">
+      <div>
+        <h1>NAME</h1>
+        <p>A platform to find volunteers and to volunteer in your local neighborhood.</p>
+      </div>
+    </section>
+    <img src="@/assets/home_bg.jpg">
   </div>
   </template>
   
@@ -14,7 +20,17 @@
   </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
+  <style>
+
+  body {
+    background: #eeebe6;
+  }
+  img {
+    width: min(100%, 1000px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
   h3 {
     margin: 40px 0 0;
   }
