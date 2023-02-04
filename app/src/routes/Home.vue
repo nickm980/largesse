@@ -3,11 +3,12 @@
     <section class="content">
       <NavBar></NavBar>
       <div class="desc">
-        <h1>NAME</h1>
+        <b>VOLUNTEER | COMMUNITY SERVICE</b>
+        <h1>LARGESSE</h1>
         <p>A platform to find volunteers and to volunteer in your local neighborhood.</p>
         <div class="aligned">
           <button>Offer Services</button>
-          <button>Find Volunteers</button>
+          <button id="find">Find Volunteers</button>
         </div>
       
       </div>
@@ -35,11 +36,18 @@
   button {
     outline: none;
     background-color: transparent;
-    border: 1px solid grey;
+    border: 1px solid #806858;
+    padding: 1em;
   }
-
+button:not(#find){
+  background-color: #806858;
+  color: #eeebe6;
+}
+  #find {
+    margin-left: 10px;
+  }
   button:hover {
-    background-color: bisque;
+    background-color: #806858;
     cursor: pointer;
   }
   .desc {

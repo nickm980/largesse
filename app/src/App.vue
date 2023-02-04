@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 export default {
     name: "App",
 };
@@ -20,5 +19,9 @@ export default {
 
 body {
     background: #eeebe6;
-  }
+}
+h1 {
+    font-size: 3rem;
+    line-height: 0;
+}
 </style>
