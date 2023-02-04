@@ -1,6 +1,7 @@
 <template>
   <div>
     <section class="content">
+      <NavBar></NavBar>
       <div>
         <h1>NAME</h1>
         <p>A platform to find volunteers and to volunteer in your local neighborhood.</p>
@@ -11,11 +12,16 @@
   </template>
   
   <script>
+  import Navbar from '../components/Navbar.vue';
+
   export default {
     name: 'App',
     props: {
       msg: String
-    }
+    },
+    components: {
+      Navbar
+    },
   }
   </script>
   
