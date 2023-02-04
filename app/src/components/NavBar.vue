@@ -1,15 +1,16 @@
 <template>
+    
     <nav class="navbar">
         <div class="logo">
             <p id="logoimg">LARGESSE</p>
         </div>
 
         <ul class="links">
-            <li><router-link>Food</router-link></li>
-            <li>Shelter</li>
-            <li>Clothing</li>
-            <li>Community</li>
-            <li>Animals</li>
+            <li><router-link to="/service/food">Food</router-link></li>
+            <li><router-link to="/service/shelter">Shelter</router-link></li>
+            <li><router-link to="/service/clothing">Clothing</router-link></li>
+            <li><router-link to="/service/animals">Animals</router-link></li>
+            <li><router-link to="/service/other">Other</router-link></li>
         </ul>
         <div class="spacer"></div>
     </nav>
