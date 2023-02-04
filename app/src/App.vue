@@ -23,9 +23,11 @@ export default {
 
 body {
     background: #eeebe6;
+    padding-left: 2em;
 }
 
 h1 {
+    color: #9e9377;
     font-size: 4rem;
     line-height: 1.1;
 }

@@ -3,12 +3,12 @@
     <section class="content">
       <NavBar></NavBar>
       <div class="desc">
-        <p class="description">VOLUNTEER | COMMUNITY SERVICE</p>
+        <p class="description">VOLUNTEER | SERVICE</p>
         <h1>LARGESSE</h1>
         <p>A platform to find volunteers and to volunteer in your local neighborhood. Aiding each other to build a better planet. </p>
         <div class="aligned">
-          <button>Offer Services</button>
-          <button id="find">Find Volunteers</button>
+          <button>OFFER SERVICES</button>
+          <button id="find">FIND VOLUNTEERS</button>
         </div>
       
       </div>
@@ -37,6 +37,7 @@
     margin-top: 1em;
   }
   .description {
+    letter-spacing: 5px;
     opacity: .5;
   }
   p {
@@ -50,10 +51,9 @@
     font-weight: bold;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    text-transform: capitalize;
   }
 button:not(#find){
-  background-color: #a79987;
+  background-color: #9e9377;
   color: #eeebe6;
 }
   #find {
