@@ -50,6 +50,7 @@
     font-weight: bold;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    text-transform: capitalize;
   }
 button:not(#find){
   background-color: #a79987;
