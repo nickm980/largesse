@@ -8,7 +8,7 @@
             <li><router-link>Food</router-link></li>
             <li>Shelter</li>
             <li>Clothing</li>
-            <li>Community Service</li>
+            <li>Community</li>
             <li>Animals</li>
         </ul>
         <div class="spacer"></div>
