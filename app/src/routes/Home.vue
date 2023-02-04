@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="content">
-      <NavBar></NavBar>
+      <Navbar></Navbar>
       <div>
         <h1>NAME</h1>
         <p>A platform to find volunteers and to volunteer in your local neighborhood.</p>
