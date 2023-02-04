@@ -5,9 +5,6 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import Home from './routes/Home.vue';
-import About from './routes/About.vue';
-import NotFound from './routes/NotFound.vue';
 
 export default {
     name: "App",
@@ -15,21 +12,6 @@ export default {
         HelloWorld,
     },
 };
-
-const routes = {
-    "/": Home,
-    "/about": About,
-};
-
-const currentPath = ref(window.location.hash);
-
-window.addEventListener("hashchange", () => {
-    currentPath.value = window.location.hash;
-});
-
-const currentView = computed(() => {
-    return routes[currentPath.value.slice(1) || "/"] || NotFound;
-});
 </script>
 
 <style>
