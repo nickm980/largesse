@@ -1,5 +1,6 @@
 <template>
-    <form>
+    <h1>Offer Your Service!</h1>
+    <form class="form-container">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" />
 
@@ -15,4 +16,11 @@
 
 <script></script>
 
-<style></style>
+<style>
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 5rem;
+}
+</style>

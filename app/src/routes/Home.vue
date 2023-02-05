@@ -10,11 +10,9 @@
                     neighborhood. Aiding each other to build a better planet.
                 </p>
                 <div class="aligned">
-                    <button>
-                        <router-link to="/serviceform"
-                            >OFFER SERVICES</router-link
-                        >
-                    </button>
+                    <router-link to="/serviceform">
+                        <button>OFFER SERVICES</button>
+                    </router-link>
                     <button id="find">FIND VOLUNTEERS</button>
                 </div>
             </div>
