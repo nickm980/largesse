@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <h2>{{$route.query.q}} Volunteering Events</h2>
+        <h2>{{ $route.query.q }} Volunteering Events</h2>
         <div class="grid">
             <div v-for="item in myJson" :key="item.placename" class="box-container">
                 <router-link :to="'/volunteer/' + item.placename">
@@ -43,27 +43,34 @@
 .box-container {
     flex-basis: 33%;
 }
+
 .major.one {
     background-image: url("@/assets/puppy.png");
 }
+
 .major.two {
     background-image: url("@/assets/earth.png");
 }
+
 .major.three {
     background-image: url("@/assets/math.png");
 }
-.major  {
+
+.major {
     background-size: cover;
 }
+
 h2 {
     margin-top: 2rem;
     text-transform: capitalize;
 }
+
 .transparent {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.695);
 }
+
 .major h3 {
     padding: 1rem;
     padding-top: 2.2rem;
@@ -76,11 +83,13 @@ h2 {
     position: absolute;
     padding: 1em;
 }
+
 .major {
     color: rgb(220, 220, 220);
     height: 250px;
     cursor: pointer;
 }
+
 .grid {
     display: flex;
     flex-direction: row;
@@ -106,16 +115,20 @@ h2 {
     border-radius: 10px;
     padding: 1em;
 }
+
 .flex-major {
+
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
 
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 1em;
 }
+
 .flex-major .major {
-    flex-basis: 30%;
+    flex-basis: 32.85%;
+
 }
 </style>
 <script>

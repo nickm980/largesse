@@ -43,6 +43,7 @@ app.post("/event", (req, res) => {
     });
 });
 
+
 app.get("/events/:category", (req, res) => {
     if (events.length == 0) {
         events.push(
