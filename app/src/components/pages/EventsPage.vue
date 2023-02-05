@@ -140,8 +140,21 @@ export default {
     },
     data() {
         return {
-            myJson: data,
-        };
+            post: getPost(this.$route.params.title)
+        }
+    },
+    async mounted()  {
+        await this.fetchData()
+    },
+    methods: {
+        async fetchData() {
+            this.error = this.post = null
+            this.loading = true
+
+            getPost(this.$route.params.id, (post) => {
+                this.post = post
+            })
+        },
     },
 };
 </script>
