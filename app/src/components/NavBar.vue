@@ -2,7 +2,7 @@
     
     <nav class="navbar">
         <div class="logo">
-            <img src="@/assets/logo.jpg">
+            <img id="logoimg" src="@/assets/logo.jpg">
         </div>
 
         <ul class="links">
@@ -25,16 +25,22 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 a {
     text-decoration: none;
     color: black;
     opacity: .6;
     font-weight: 700;
 }
-#logoimg {
-    font-weight: bold;
+#logo img {
+    width: 200px !important;
+    position: absolute;
 }
+#logoimg {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    width: 200px !important;}
 .navbar {
     display: flex;
     gap: 1rem;
