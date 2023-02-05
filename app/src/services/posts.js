@@ -1,7 +1,11 @@
-async function getPost(title) {
-    console.log(title);
-    const response = await fetch(`https://localhost:3000/volunteer?q=${title}`);
-    return response;
+async function getPosts() {
+    return [
+        {
+            "title": "Binghamton Animal Shelter",
+            "description": "We are in need of some volunteers who can help us take care of these animals"
+        }
+    ];
+}
     // return {
     //     companyName: "companyName",
     //     title: "Volunteer Event For Homeless Shelter",
@@ -16,7 +20,7 @@ async function getPost(title) {
     //         "Description of an event which happens to be a community service event Description of an event which happens to be a community service event.",
     //     location: "location",
     // };
-}
+
 
 async function getPostsByCategory(title) {
     console.log(title);
@@ -38,4 +42,4 @@ async function getPostsByCategory(title) {
     // };
 }
 
-export { getPost, getPostsByCategory};
+export { getPosts, getPostsByCategory };

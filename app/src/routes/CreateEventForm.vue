@@ -36,17 +36,14 @@
 
                     <label for="address">Address</label>
                     <input type="text" id="address" name="address" />
-
-                    <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" placeholder="(XXX)-XXX-XXXX" />
-
+                    
                     <label for="name">Brief Description</label>
                     <input type="text" id="description" name="description" />
 
                     <label for="select">Category</label>
 
                     <select name="category" id="select" form="form">
-                        <option value="volvo">Volvo</option>
+                        <option value="volvo">Animal Care</option>
                         <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
