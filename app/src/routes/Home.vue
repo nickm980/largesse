@@ -3,17 +3,17 @@
         <section>
             <NavBar></NavBar>
             <div class="desc">
-                <p class="description">VOLUNTEER | COMMUNITY</p>
+                <p class="description">FOR THE GREATER COMMUNITY</p>
                 <h1>LARGESSE</h1>
                 <p>
                     A platform to find volunteers and to volunteer in your local
                     neighborhood. Aiding each other to build a better planet.
                 </p>
                 <div class="aligned">
-                    <router-link to="/serviceform">
+                    <router-link to="/create">
                         <button>CREATE AN EVENT</button>
                     </router-link>
-                    <router-link to="/findvolunteers">
+                    <router-link to="/volunteer">
                         <button id="find">VOLUNTEER</button>
                     </router-link>
                 </div>
@@ -64,6 +64,8 @@ button {
     font-weight: bold;
     padding-left: 1.5em;
     padding-right: 1.5em;
+    letter-spacing: 2px;
+    font-size: .8rem;
 }
 button:not(#find) {
     background-color: #9e9377;

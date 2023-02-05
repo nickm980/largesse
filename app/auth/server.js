@@ -57,12 +57,16 @@ app.post("/event", (req, res) => {
         "title": req.body.title,
         "phone": req.body.phone,
         "description": req.body.desc,
+        "description": req.body.type,
         "location": req.body.location
     }
     );
     res.json({
         "status": "OK"
     });
+});
+
+app.post("/register", (req, res) => {
 });
 
 app.get("/events", (req, res) => {

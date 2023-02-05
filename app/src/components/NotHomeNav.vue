@@ -1,10 +1,6 @@
 <template>
 
     <nav class="navbar">
-        <div class="logo">
-            <img id="logoimg" src="@/assets/logo.jpg">
-        </div>
-
         <ul class="links">
             <li><router-link to="/volunteer?q=environment">Environment</router-link></li>
             <li><router-link to="/volunteer?q=animals">Animal Care</router-link></li>
@@ -13,6 +9,7 @@
             <li><router-link to="/volunteer?q=all">All</router-link></li>
         </ul>
         <div class="spacer"></div>
+        <router-link to="/create"><button>CREATE EVENT</button></router-link>
     </nav>
 </template>
 
@@ -26,6 +23,22 @@ export default {
 </script>
 
 <style scoped>
+button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #a79987;
+    padding: 1em;
+    font-weight: bold;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    letter-spacing: 2px;
+    font-size: .8rem;
+}
+
+button:hover {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
 a {
     text-decoration: none;
     color: black;
@@ -33,22 +46,13 @@ a {
     font-weight: 700;
 }
 
-#logoimg {
-    margin-top: 30px;
-    margin-left: -15px;
-    left: 50px;
-    width: 200px !important;
-}
-
 .navbar {
+    margin-top: 20px;
+    margin-left: -10px;
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
-}
-
-.logo {
-    flex: .2;
 }
 
 .links {

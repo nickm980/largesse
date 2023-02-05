@@ -17,18 +17,18 @@ const routes = [
         component: About,
     },
     {
-        path: "/service/:id",
+        path: "/volunteer/:id",
         name: "About",
         component: IService,
     },
     {
-        path: "/serviceform",
-        name: "serviceform",
+        path: "/create",
+        name: "create",
         component: ServiceForm,
     },
     {
-        path: "/findvolunteers",
-        name: "Find Volunteers",
+        path: "/volunteer",
+        name: "Volunteer",
         component: FindVolunteers,
     },
 ];

@@ -14,7 +14,10 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    margin-top: 60px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .main {
     max-width: 1200px;
@@ -28,7 +31,6 @@ export default {
 
 body {
     background: #ece9e4;
-    padding: 2em;
     padding-top: 0;
 }
 

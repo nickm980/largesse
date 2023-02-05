@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <NavBar></NavBar>
+        <NotHomeNav></NotHomeNav>
         {{ $data.loading }}
         <section class="gen">
             <h2 id="title">{{post.title}}</h2>
@@ -16,6 +16,9 @@
                         <div class="phone-number">666-666-6666</div>
                         <div class="adress">{{post.address}}</div>
                     </div>
+                    <div class="spacer"></div>
+                    <p class="registered"><span class="b">0</span> Currently Registered</p>
+                    <button>Register For Event</button>
                 </div>
             </div>
         </section>
@@ -34,7 +37,7 @@
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue';
+import NotHomeNav from '../components/NotHomeNav.vue';
 import {getPost} from '../services/posts.js';
 
 export default {
@@ -57,13 +60,23 @@ export default {
         },
     },
     components: {
-        NavBar,
+        NotHomeNav,
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.registered {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+.registered {
+    font-style: italic;
+}
+.b {
+    font-weight: bold;
+}
 .gen {
     margin: 0 auto;
     margin-top: 2rem;
@@ -73,7 +86,29 @@ export default {
     text-align: center;
     font-size: 2rem;
 }
-.flex-inline {
+button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #a79987;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    letter-spacing: 2px;
+    font-size: .8rem;
+}
+button:not(#find) {
+    background-color: #9e9377;
+    color: #eeebe6;
+}
+#find {
+    margin-left: 10px;
+}
+button:hover {
+    filter: brightness(0.8);
+    cursor: pointer;
+}.flex-inline {
     display: flex;
     flex-direction: row;
     margin-top: 1em;
@@ -96,12 +131,16 @@ h3{
     margin: 0 !important;
 }
 section {
+    max-width: 900px;
+    margin: 0 auto;
     margin-top: 3em;
+
 }
 
 .detailed {
     margin: 0 auto;
     max-width: 900px;
+    gap: 3rem;
     margin-top: 2rem;
     display: flex;
     align-items: flex-start;
