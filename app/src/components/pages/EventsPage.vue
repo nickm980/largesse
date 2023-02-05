@@ -16,12 +16,13 @@
                 </div>
             </div>
             <div class="major three">
-                <p>Help Fight Animal Cruelty</p>
-                <h3>Animal Care</h3>
+                <p>Teach others something new</p>
+                <h3>Education</h3>
                 <div class="transparent">
                 </div>
             </div>
         </div>
+        <h2>{{$route.query.q}} Volunteering Events</h2>
         <div class="grid">
             <div v-for="item in myJson" :key="item.placename" class="box-container">
                 <router-link :to="'/volunteer/' + item.placename">
@@ -42,10 +43,21 @@
 .box-container {
     flex-basis: 33%;
 }
-
-.major  {
+.major.one {
     background-image: url("@/assets/puppy.png");
+}
+.major.two {
+    background-image: url("@/assets/earth.png");
+}
+.major.three {
+    background-image: url("@/assets/math.png");
+}
+.major  {
     background-size: cover;
+}
+h2 {
+    margin-top: 2rem;
+    text-transform: capitalize;
 }
 .transparent {
     width: 100%;
@@ -55,7 +67,7 @@
 .major h3 {
     padding: 1rem;
     padding-top: 2.2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     position: absolute;
 }

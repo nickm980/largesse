@@ -1,8 +1,11 @@
 <template>
     <div class="flexer">
         <div class="bg">
-            <router-link to="/"><div class="title">
-                <font-awesome class="icon" icon="fa-solid fa-chevron-left"></font-awesome></div></router-link>
+            <router-link to="/">
+                <div class="title">
+                    <font-awesome class="icon" icon="fa-solid fa-chevron-left"></font-awesome>
+                </div>
+            </router-link>
             <div class="c">
                 <div class="sec">
                     <b>Create A New Event.</b>
@@ -40,6 +43,25 @@
                     <label for="name">Brief Description</label>
                     <input type="text" id="description" name="description" />
 
+                    <label for="select">Category</label>
+
+                    <select id="select">
+                        <option>
+                            sdfd
+                        </option>
+                        <option>
+                            sdfd
+                        </option>
+                        <option>
+                            sdfd
+                        </option>
+                        <option>
+                            sdfd
+                        </option>
+                        <option>
+                            sdfd
+                        </option>
+                    </select>
                     <input type="submit" value="SUBMIT" />
                 </form>
             </div>
@@ -69,6 +91,10 @@ h1 {
     color: white;
 }
 
+.form-container {
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+}
 .form-container .container {
     font-size: 5rem;
     margin: 0 auto;
@@ -95,11 +121,12 @@ h1 {
     margin-top: 4rem;
     color: rgb(216, 216, 216);
 }
+
 .sec p {
     line-height: 1.5em;
     color: grey;
     margin-top: 5px;
-    
+
 }
 
 .flexer {
@@ -127,7 +154,7 @@ label {
     font-weight: bold;
 }
 
-input {
+input, select {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1em;
     border: none;
@@ -141,5 +168,4 @@ input[type="submit"] {
     cursor: pointer;
     letter-spacing: 1.5px;
 }
-
 </style>
