@@ -12,6 +12,10 @@
                 <div class="two">
                     <h3>{{post.companyName}}</h3>
                     <p>{{post.description}}</p>
+                    <div class="flex-inline">
+                        <div class="phone-number">666-666-6666</div>
+                        <div class="adress">{{post.address}}</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -36,7 +40,7 @@ import NavBar from '../components/NavBar.vue';
 export default {
     data() {
         return {
-            post: getPost()
+            post: getPost(this.$route.params.title)
         }
     },
     mounted() {
@@ -63,7 +67,23 @@ export default {
 #title {
     font-size: 2rem;
 }
+.flex-inline {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+.flex-inline div {
+    flex-grow: 1;
+    font-weight: bold;
+    opacity: .8;
+    letter-spacing: 1px;
+}
+
 .two {
+    max-width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction:column;
     padding-left: 1em;
 }
 h3{
