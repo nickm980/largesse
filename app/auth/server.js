@@ -79,7 +79,6 @@ var events = [
     {
         "title": "Center for Bioregional Living",
         "category": "shelters",
-
         "address": "253 Briggs Hwy, Ellenville, NY 12428, United States",
         "place_id": "ChIJi-KbDu_v2okRg2BOUI1jonQ",
         "rating": "3"
@@ -87,7 +86,6 @@ var events = [
     {
         "title": "Voluntary Action Center",
         "category": "shelters",
-
         "address": "101 Jensen Rd, Vestal, NY 13850, United States",
         "place_id": "ChIJC90qErnv2okRIsVvT_UqNBQ",
         "rating": "3"
@@ -151,7 +149,7 @@ app.get("/events/:category", (req, res) => {
     }
     res.json({
         "status": "OK",
-        "events": events.filter(e => {e.category == req.params.category})
+        "events": events.filter(e => e.category == req.params.category)
     })
 });
 
