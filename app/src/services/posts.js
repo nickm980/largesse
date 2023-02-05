@@ -1,4 +1,4 @@
-function getPost(title){
+async function getPost(title){
     console.log(title);
     return {
         "companyName": "companyName",
