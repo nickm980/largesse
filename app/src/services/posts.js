@@ -1,6 +1,6 @@
 async function getPost(title){
     console.log(title);
-    const reponse = await fetch(`https://localhost:3000/volunteer?q=${title}`);
+    const response = await fetch(`https://localhost:3000/volunteer?q=${title}`);
     return response;
     // return {
     //     companyName: "companyName",
