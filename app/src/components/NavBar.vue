@@ -2,7 +2,7 @@
     
     <nav class="navbar">
         <div class="logo">
-            <p id="logoimg">LARGESSE</p>
+            <img src="@/assets/logo.jpg">
         </div>
 
         <ul class="links">
