@@ -18,4 +18,10 @@ async function getPost(title){
     // };
 }
 
-export { getPost };
+async function getByCategory(category){
+    console.log(category);
+    const response = await fetch(`https://localhost:3000/events/${title}`);
+    return response;
+}
+
+export { getPost, getByCategory };
