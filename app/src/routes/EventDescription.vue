@@ -16,7 +16,7 @@
                 ></iframe>
                 <div class="two">
                     <h3>{{ post.companyName }}</h3>
-                    <p>{{ post.title }}</p>
+                    <p>Binghamton Animal</p>
                     <p>{{ post.address }}</p>
                     <p>{{ post.rating }}</p>
                     <p>{{ post.description }}</p>

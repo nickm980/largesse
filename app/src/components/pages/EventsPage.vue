@@ -24,7 +24,7 @@
         </div>
         <h2>{{ $route.query.q }} Volunteering Events</h2>
         <div class="grid">
-            <div v-for="item in myJson" :key="item.title" class="box-container">
+            <div v-for="item in myData" :key="item.title" class="box-container">
                 <router-link :to="'/volunteer/' + item.title">
                     <div class="box">
                         <p class="title">{{ item.title == null ? item.title : item.title }}</p>
@@ -68,7 +68,7 @@ h2 {
 .transparent {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.695);
+    background-color: rgba(0, 0, 0, 0.395);
 }
 
 .major h3 {
@@ -133,7 +133,6 @@ h2 {
 </style>
 <script>
 import NotHomeNav from '../NotHomeNav.vue';
-import {getPosts} from '../../services/posts.js'
 
 export default {
     components: {
@@ -141,7 +140,16 @@ export default {
     },
     data() {
         return {
-            myData: getPosts()
+            myData: [
+                {
+                    "title": "Binghamton Animal Shelter",
+                    "description": "We are need of volunteers who can help us with our animals"
+                },
+                {
+                    "title": "Binghamton Food Pantry",
+                    "description": "We are need of volunteers who can help us with our food pantry"
+                }
+            ]
         }
     },
 };
