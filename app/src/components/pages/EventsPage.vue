@@ -3,24 +3,29 @@
         <NotHomeNav></NotHomeNav>
         <h2>Popular Categories</h2>
         <div class="flex-major">
-            <div class="major one">
-                <p>Help Fight Animal Cruelty</p>
-                <h3>Animal Care</h3>
-                <div class="transparent">
+            <router-link to="/volunteer?q=cruelty" class="major one">
+                <div>
+                    <p>Help Fight Animal Cruelty</p>
+                    <h3>Animal Care</h3>
+                    <div class="transparent">
+                    </div>
                 </div>
-            </div>
-            <div class="major two">
-                <p>Save The World From Damage</p>
-                <h3>Climate Change</h3>
-                <div class="transparent">
+            </router-link>
+            <router-link to="/volunteer?q=climate" class="major two">
+                <div>
+                    <p>Save The World From Damage</p>
+                    <h3>Climate Change</h3>
+                    <div class="transparent">
+                    </div>
                 </div>
-            </div>
-            <div class="major three">
-                <p>Teach others something new</p>
-                <h3>Education</h3>
-                <div class="transparent">
+            </router-link>
+            <router-link to="/volunteer?q=education" class="major three">
+                <div>
+                    <p>Teach others something new</p>
+                    <h3>Education</h3>
+                    <div class="transparent"></div>
                 </div>
-            </div>
+            </router-link>
         </div>
         <h2>{{ $route.query.q }} Volunteering Events</h2>
         <div class="grid">
@@ -133,26 +138,24 @@ h2 {
 </style>
 <script>
 import NotHomeNav from '../NotHomeNav.vue';
-import data from "../../data/testData.json";
+import { getPostsByCategory } from '../../services/posts.js';
+
 export default {
     components: {
         NotHomeNav,
     },
     data() {
         return {
-            post: getPost(this.$route.params.title)
+            myData: getPostsByCategory(this.$route.query.q)
         }
     },
-    async mounted()  {
+    async mounted() {
         await this.fetchData()
     },
     methods: {
         async fetchData() {
-            this.error = this.post = null
-            this.loading = true
-
-            getPost(this.$route.params.id, (post) => {
-                this.post = post
+            getPostsByCategory(this.$route.query.q, (myData) => {
+                this.myData = myData
             })
         },
     },
