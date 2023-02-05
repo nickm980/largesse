@@ -1,4 +1,5 @@
-async function getPost(title){
+async function getPost(){
+    var title = '';
     console.log(title);
     const response = await fetch(`https://localhost:3000/volunteer?q=${title}`);
     return response;
@@ -20,8 +21,9 @@ async function getPost(title){
 
 async function getByCategory(category){
     console.log(category);
-    const response = await fetch(`https://localhost:3000/events/${title}`);
+    const response = await fetch(`https://localhost:3000/events/${category}`);
     return response;
 }
+
 
 export { getPost, getByCategory };
