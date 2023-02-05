@@ -44,6 +44,60 @@ var events = [
         "place_id": "ChIJ7U3pEmvv2okRrlWk___XgHQ",
         "rating": "5",
         "category": "pantry"
+    },
+    {
+        "title": "United Way of Broome County",
+        "address": "101 Jensen Rd, Vestal, NY 13850, United States",
+        "place_id": "ChIJyVQXhQjv2okR_AIrAjEusr4",
+        "category": "shelters",
+        "rating": "4.5"
+    },
+    {
+        "title": "Volunteers of America",
+        "address": "295 Clinton St, Binghamton, NY 13905, United States",
+        "place_id": "ChIJsYbUZXsZyUwRNG_a2J45e2I",
+        "category": "shelters",
+
+        "rating": "4.3"
+    },
+    {
+        "title": "Volunteers of America",
+        "category": "shelters",
+
+        "address": "320 Chenango St, Binghamton, NY 13901, United States",
+        "place_id": "ChIJD4yPYn_v2okROc-xjpp5Yjc",
+        "rating": "3.6"
+    },
+    {
+        "title": "The Beloved Community House",
+        "category": "shelters",
+
+        "address": "45 Riverside Dr, Binghamton, NY 13905, United States",
+        "place_id": "ChIJVXqUlmr_54kRm5H2G7VhSP8",
+        "rating": "4.3"
+    },
+    {
+        "title": "Center for Bioregional Living",
+        "category": "shelters",
+
+        "address": "253 Briggs Hwy, Ellenville, NY 12428, United States",
+        "place_id": "ChIJi-KbDu_v2okRg2BOUI1jonQ",
+        "rating": "3"
+    },
+    {
+        "title": "Voluntary Action Center",
+        "category": "shelters",
+
+        "address": "101 Jensen Rd, Vestal, NY 13850, United States",
+        "place_id": "ChIJC90qErnv2okRIsVvT_UqNBQ",
+        "rating": "3"
+    },
+    {
+        "title": "Broome County Habitat For Humanity",
+        "category": "shelters",
+        "address": "103 Adams Ave, Endicott, NY 13760, United States",
+        "place_id": "ChIJb4Z-Tors2okRMy4FkW9OvKo",
+        "rating": "3"
     }
 ];
 

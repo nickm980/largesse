@@ -3,7 +3,7 @@
         <NotHomeNav></NotHomeNav>
         <h2>Popular Categories</h2>
         <div class="flex-major">
-            <router-link to="/volunteer?q=cruelty" class="major one">
+            <router-link to="/volunteer?q=shelters" class="major one">
                 <div>
                     <p>Help Fight Animal Cruelty</p>
                     <h3>Animal Care</h3>
