@@ -1,15 +1,18 @@
 <template>
     <div>
-        <div v-for="data in myJson">{{ data }}</div>
+        <div v-for="item in myJson" :key="item.placename">
+            <p>{{ item.placename }}</p>
+            <p>{{ item.address }}</p>
+        </div>
     </div>
 </template>
 
 <script>
-import csvParserjs from "../data/csvParser.js";
+import data from "../data/testData.json";
 export default {
     data() {
         return {
-            myJson: json,
+            myJson: data,
         };
     },
 };

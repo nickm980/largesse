@@ -3,6 +3,7 @@ import Home from "./routes/Home.vue";
 import About from "./routes/About.vue";
 import IService from "./routes/IService.vue";
 import ServiceForm from "./routes/ServiceForm.vue";
+import FindVolunteers from "./routes/FindVolunteers.vue";
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: "/serviceform",
         name: "serviceform",
         component: ServiceForm,
+    },
+    {
+        path: "/findvolunteers",
+        name: "Find Volunteers",
+        component: FindVolunteers,
     },
 ];
 

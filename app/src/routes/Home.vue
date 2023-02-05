@@ -13,7 +13,9 @@
                     <router-link to="/serviceform">
                         <button>OFFER SERVICES</button>
                     </router-link>
-                    <button id="find">FIND VOLUNTEERS</button>
+                    <router-link to="/findvolunteers">
+                        <button id="find">FIND VOLUNTEERS</button>
+                    </router-link>
                 </div>
             </div>
         </section>
