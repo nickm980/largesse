@@ -34,11 +34,6 @@ body {
     padding-top: 0;
 }
 
-h1 {
-    color: #9e9377;
-    font-size: 4rem;
-    line-height: 1.1;
-}
 .spacer {
     flex: 1;
 }

@@ -4,10 +4,10 @@
             <NavBar></NavBar>
             <div class="desc">
                 <p class="description">FOR THE GREATER COMMUNITY</p>
-                <h1>LARGESSE</h1>
+                <h1 class="title">LARGESSE</h1>
                 <p>
                     A platform to find volunteers and to volunteer in your local
-                    neighborhood. Aiding each other to build a better planet.
+                    neighborhood. Aiding each other to build a better planet, for the local Binghamton community.
                 </p>
                 <div class="aligned">
                     <router-link to="/create">
@@ -55,6 +55,14 @@ p {
 }
 p {
     margin-top: 0.5em;
+}
+.title {
+  margin-top: .5rem;
+  color: #9e9377;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: .8rem;
+  line-height: 1.1;
 }
 button {
     outline: none;
