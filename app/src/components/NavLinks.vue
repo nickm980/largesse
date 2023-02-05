@@ -1,28 +1,30 @@
 <template>
+    <ul class="links">
+        <li><DropDown :links="[
+            {'name': 'Climate Change', 'to': 'a'}
+            ,{'name': 'Farm Work', 'to': 'b'}
+            ,{'name': 'Environmental Conservation', 'to': 'b'}
+            ,{'name': 'Permaculture Projects', 'to': 'b'}
 
-    <nav class="navbar">
-        <div class="logo">
-            <img id="logoimg" src="@/assets/logo.jpg">
-        </div>
-
-        <NavLinks></NavLinks>
-        <div class="spacer"></div>
-    </nav>
+            ]">Environment</DropDown></li>
+        <li><DropDown :links="[]">Environment</DropDown></li>
+        <li><DropDown :links="[]">Environment</DropDown></li>
+        <li><DropDown :links="[]">Environment</DropDown></li>
+    </ul>
 </template>
 
 <script>
-import NavLinks from './NavLinks.vue';
+import DropDown from './DropDown.vue';
 
 export default {
-    name: "NavBar",
+    name: 'NavLinks',
     components: {
-        NavLinks
-    },
-};
+        DropDown
+    }
+}
 </script>
 
 <style scoped>
-
 a {
     text-decoration: none;
     color: #8e8c89;

@@ -3,7 +3,6 @@ import cookieSession from "cookie-session";
 
 const app = express();
 var events = [];
-var users = [];
 
 const placeholderEvent = {
     "isCustom": true,
@@ -17,30 +16,7 @@ const placeholderEvent = {
 app.use(express.cookieParser());
 
 app.use("/", (req, res, next) => {
-    console.log('Request Type:', req.method)
-    console.log(req.cookies)
     next()
-});
-
-app.get("/clear", (req, res) => {
-
-});
-
-//body name:,pass, 
-app.post("/signup", (req, res) => {
-    console.log("[Req] Signup");
-    let options = {
-        maxAge: 1000 * 60 * 15, // would expire after 15 minutes
-        httpOnly: true, // The cookie only accessible by the web server
-        signed: true // Indicates if the cookie should be signed
-    }
-
-    res.cookie('username', req.body.username, options)
-
-
-    res.json({
-        "status": "successful"
-    });
 });
 
 app.get("/health", (req, res) => {
@@ -58,7 +34,8 @@ app.post("/event", (req, res) => {
         "phone": req.body.phone,
         "description": req.body.desc,
         "description": req.body.type,
-        "location": req.body.location
+        "location": req.body.location,
+        "category": req.query.category
     }
     );
     res.json({
@@ -66,10 +43,7 @@ app.post("/event", (req, res) => {
     });
 });
 
-app.post("/register", (req, res) => {
-});
-
-app.get("/events", (req, res) => {
+app.get("/events/:category", (req, res) => {
     if (events.length == 0) {
         events.push(
             placeholderEvent
@@ -77,8 +51,14 @@ app.get("/events", (req, res) => {
     }
     res.json({
         "status": "OK",
-        "events": events
+        "events": events.filter(e => {e.category == req.params.category})
     })
 });
+
+app.post("/register", (req, res)=>{
+
+    
+});
+
 
 app.listen(3000)

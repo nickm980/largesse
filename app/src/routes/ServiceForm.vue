@@ -2,7 +2,7 @@
     <div class="flexer">
         <div class="bg">
             <router-link to="/"><div class="title">
-                &lt;</div></router-link>
+                <font-awesome class="icon" icon="fa-solid fa-chevron-left"></font-awesome></div></router-link>
             <div class="c">
                 <div class="sec">
                     <b>Create A New Event.</b>
@@ -64,6 +64,10 @@ h1 {
     color: rgb(178, 178, 178);
 }
 
+.icon {
+    color: white;
+}
+
 .form-container .container {
     font-size: 5rem;
     margin: 0 auto;
@@ -90,9 +94,11 @@ h1 {
     margin-top: 4rem;
     color: rgb(216, 216, 216);
 }
-
 .sec p {
+    line-height: 1.5em;
     color: grey;
+    margin-top: 5px;
+    
 }
 
 .flexer {

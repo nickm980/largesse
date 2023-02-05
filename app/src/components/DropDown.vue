@@ -2,11 +2,11 @@
     <div @click="toggle" class="dropdown" :class="{dropdownActive : active}">
         <button class="button">
             <slot /> <font-awesome-icon icon="fa-solid fa-chevron-down" />
-
         </button>
         <div class="links" v-if="active">
-            <div v-for="link in links" :key="link.name">
-                <router-link class="link" :to="'/volunteer?q=' + link.to">{{ link.name }}</router-link>
+            <font-awesome-icon class="icon" icon="fa-solid fa-caret-up" />
+            <div v-for="link in links" :key="link.name" class="link">
+                <router-link class="router-link" :to="'/volunteer?q=' + link.to">{{ link.name }}</router-link>
             </div>
         </div>
     </div>
@@ -31,6 +31,13 @@ export default {
 }
 </script>
 <style scoped>
+.icon {
+    z-index: 1;
+    font-size: 16px;
+    position: absolute;
+    top: -.6em;
+    opacity: .2;
+}
 button {
     font-weight: bold;
     opacity: .4;
@@ -46,10 +53,18 @@ button:hover, .dropdownActive {
     border-radius: 5px !important;
     background-color: rgba(0, 0, 0, 0.058);
 }
-.link {
-    margin-bottom: 1em;
-    border: 1px solid green;
-    padding: 1rem;
+.link  {
+    min-width: 100px;
+    margin-bottom: .2em;
+    padding: .5em;
+    border-radius: 5px;
+}
+.link:hover {
+
+    background-color: rgba(128, 128, 128, 0.376);
+}
+a {
+    padding: .5em;
 }
 button:hover .links {
     display: visible;
