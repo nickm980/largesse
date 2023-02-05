@@ -32,4 +32,7 @@ h1 {
     font-size: 4rem;
     line-height: 1.1;
 }
+.spacer {
+    flex: 1;
+}
 </style>
