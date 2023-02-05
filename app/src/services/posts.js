@@ -1,4 +1,4 @@
-function getPost(title){
+async function getPost(title){
     console.log(title);
     const reponse = await fetch(`https://localhost:3000/volunteer?q=${title}`);
     return response;
