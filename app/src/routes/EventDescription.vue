@@ -3,21 +3,31 @@
         <NotHomeNav></NotHomeNav>
         {{ $data.loading }}
         <section class="gen">
-            <h2 id="title">{{post.title}}</h2>
+            <h2 id="title">{{ post.title }}</h2>
             <div class="detailed">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94728.28670327867!2d-75.97379860041833!3d42.10192441950143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89daef72dfadb7d1%3A0x68f9703f7ed337f!2sBinghamton%2C%20NY!5e0!3m2!1sen!2sus!4v1675556245246!5m2!1sen!2sus"
-                    width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    width="450"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
                 <div class="two">
-                    <h3>{{post.companyName}}</h3>
-                    <p>{{post.description}}</p>
+                    <h3>{{ post.companyName }}</h3>
+                    <p>{{ post.title }}</p>
+                    <p>{{ post.address }}</p>
+                    <p>{{ post.rating }}</p>
+                    <p>{{ post.description }}</p>
                     <div class="flex-inline">
                         <div class="phone-number">666-666-6666</div>
-                        <div class="adress">{{post.address}}</div>
+                        <div class="adress">{{ post.address }}</div>
                     </div>
                     <div class="spacer"></div>
-                    <p class="registered"><span class="b">0</span> Currently Registered</p>
+                    <p class="registered">
+                        <span class="b">0</span> Currently Registered
+                    </p>
                     <button>Register For Event</button>
                 </div>
             </div>
@@ -37,39 +47,39 @@
 </template>
 
 <script>
-import NotHomeNav from '../components/NotHomeNav.vue';
-import {getPost} from '../services/posts.js';
+import NotHomeNav from "../components/NotHomeNav.vue";
+import { getPost } from "../services/posts.js";
 
 export default {
     data() {
         return {
-            post: getPost(this.$route.params.title)
-        }
+            post: getPost(this.$route.params.title),
+        };
     },
     mounted() {
-        this.fetchData()
+        this.fetchData();
     },
     methods: {
         fetchData() {
-            this.error = this.post = null
-            this.loading = true
+            this.error = this.post = null;
+            this.loading = true;
 
             getPost(this.$route.params.id, (post) => {
-                this.post = post
-            })
+                this.post = post;
+            });
         },
     },
     components: {
         NotHomeNav,
-    }
-}
+    },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .registered {
-    font-size: .8rem;
-    margin-bottom: .5rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 .registered {
     font-style: italic;
@@ -80,7 +90,6 @@ export default {
 .gen {
     margin: 0 auto;
     margin-top: 2rem;
-
 }
 #title {
     text-align: center;
@@ -96,7 +105,7 @@ button {
     padding-left: 1.5em;
     padding-right: 1.5em;
     letter-spacing: 2px;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 button:not(#find) {
     background-color: #9e9377;
@@ -108,7 +117,8 @@ button:not(#find) {
 button:hover {
     filter: brightness(0.8);
     cursor: pointer;
-}.flex-inline {
+}
+.flex-inline {
     display: flex;
     flex-direction: row;
     margin-top: 1em;
@@ -116,7 +126,7 @@ button:hover {
 .flex-inline div {
     flex-grow: 1;
     font-weight: bold;
-    opacity: .8;
+    opacity: 0.8;
     letter-spacing: 1px;
 }
 
@@ -124,10 +134,10 @@ button:hover {
     max-width: 450px;
     height: 450px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     padding-left: 1em;
 }
-h3{
+h3 {
     margin: 0 !important;
 }
 
@@ -135,7 +145,6 @@ section {
     max-width: 900px;
     margin: 0 auto;
     margin-top: 3em;
-
 }
 
 .detailed {
@@ -147,7 +156,9 @@ section {
     align-items: flex-start;
 }
 
-.review-box:first {margin-top: 1em;}
+.review-box:first {
+    margin-top: 1em;
+}
 .review-box {
     margin-top: 1rem;
     background-color: #dbd8d2;
@@ -159,7 +170,8 @@ h3 {
     margin: 40px 0 0;
 }
 .two p {
-    margin-top: .5em;}
+    margin-top: 0.5em;
+}
 ul {
     list-style-type: none;
     padding: 0;
