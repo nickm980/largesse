@@ -26,7 +26,7 @@
             <div class="container">
                 <h1>Create A New Event</h1>
                 <p>Easiest way to get volunteers to help you with your event</p>
-                <form action="http://localhost:3000/events" id="form">
+                <form action="http://localhost:3000/event" id="form" method="POST" target="_blank">
                     <div class="flex"></div>
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" />
@@ -45,15 +45,14 @@
 
                     <label for="select">Category</label>
 
+                    <select name="category" id="select" form="form">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                      </select>
                     <input type="submit" value="SUBMIT" />
                 </form>
-
-                <select name="category" id="select" form="form">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
-                  </select>
             </div>
         </div>
 

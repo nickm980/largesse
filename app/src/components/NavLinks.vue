@@ -1,6 +1,6 @@
 <template>
     <ul class="links">
-        <li>
+        <li class="first">
             <DropDown :links="[
                 { 'name': 'Climate Change', 'to': 'climate' }
                 , { 'name': 'Farm Work', 'to': 'farm' }
@@ -94,6 +94,10 @@ li {
     float: left;
     margin-left: 1em;
     margin-right: 1em;
+}
+
+.first {
+    margin-left: 0;
 }
 
 ul {

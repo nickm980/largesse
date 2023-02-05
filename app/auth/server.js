@@ -13,8 +13,6 @@ const placeholderEvent = {
     "location": "location of the event"
 };
 
-app.use(express.cookieParser());
-
 app.use("/", (req, res, next) => {
     next()
 });
@@ -27,17 +25,19 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/event", (req, res) => {
+    console.log(req.body)
     events.push({
         "isCustom": true,
-        "companyName": req.body.companyName,
-        "title": req.body.title,
-        "phone": req.body.phone,
-        "description": req.body.desc,
-        "description": req.body.type,
-        "location": req.body.location,
+        "fullName": req.query.name,
+        "companyName": req.query.companyName,
+        "phone": req.query.phone,
+        "description": req.query.description,
+        "location": req.query.address,
         "category": req.query.category
     }
     );
+    console.log(events)
+
     res.json({
         "status": "OK"
     });
