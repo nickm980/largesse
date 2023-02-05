@@ -18,8 +18,6 @@
 </template>
 
 <style scoped>
-
-.place {}
 .box-container {
    flex-basis: 33%;
 }

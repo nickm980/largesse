@@ -2,7 +2,7 @@
     <div class="flexer">
         <div class="bg">
             <router-link to="/"><div class="title">
-                &lt; Go Back</div></router-link>
+                &lt;</div></router-link>
             <div class="c">
                 <div class="sec">
                     <b>Create A New Event.</b>

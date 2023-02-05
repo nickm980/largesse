@@ -58,7 +58,7 @@ p {
 }
 .title {
   margin-top: .5rem;
-  color: #9e9377;
+  color: #5f5b47;
   font-size: 4rem;
   font-weight: 100;
   letter-spacing: .8rem;
@@ -80,10 +80,13 @@ button:not(#find) {
     color: #eeebe6;
 }
 #find {
+  background-color: #5f5b47;
+  color: #eeebe6;
     margin-left: 10px;
 }
 button:hover {
-    filter: brightness(0.8);
+    background-color: #5f5b47 !important;
+    color: #ece9e4 !important;
     cursor: pointer;
 }
 .desc {

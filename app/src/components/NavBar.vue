@@ -6,19 +6,23 @@
         </div>
 
         <ul class="links">
-            <li><router-link to="/volunteer?q=environment">Environment</router-link></li>
-            <li><router-link to="/volunteer?q=animals">Animal Care</router-link></li>
-            <li><router-link to="/volunteer?q=social">Social</router-link></li>
-            <li><router-link to="/volunteer?q=healthcare">Healthcare</router-link></li>
-            <li><router-link to="/volunteer?q=all">All</router-link></li>
+            <li><DropDown :links="[{'name': 'a', 'to': 'a'},{'name': 'b', 'to': 'b'}]">Environment</DropDown></li>
+            <li><DropDown :links="[]">Environment</DropDown></li>
+            <li><DropDown :links="[]">Environment</DropDown></li>
+            <li><DropDown :links="[]">Environment</DropDown></li>
         </ul>
         <div class="spacer"></div>
     </nav>
 </template>
 
 <script>
+import DropDown from './DropDown.vue';
+
 export default {
     name: "NavBar",
+    components: {
+        DropDown,
+    },
     props: {
         msg: String,
     },
@@ -26,11 +30,14 @@ export default {
 </script>
 
 <style scoped>
+
 a {
     text-decoration: none;
-    color: black;
-    opacity: .6;
-    font-weight: 700;
+    color: #8e8c89;
+    font-weight: bold;
+    padding: .5em;
+    font-size: .8rem;
+
 }
 
 #logoimg {
