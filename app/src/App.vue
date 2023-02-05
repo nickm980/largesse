@@ -22,7 +22,7 @@ export default {
 }
 
 body {
-    background: #eeebe6;
+    background: #ece9e4;
     padding: 2em;
     padding-top: 0;
 }

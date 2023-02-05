@@ -17,7 +17,7 @@
                 </div>
             </div>
         </section>
-        <img src="@/assets/home_bg.jpg" />
+        <img src="@/assets/cropped2.jpg" />
     </div>
 </template>
 
@@ -88,7 +88,7 @@ button:hover {
 }
 
 img {
-    width: min(100%, 1000px);
+    width: min(100%, 1350px);
     position: absolute;
     right: 0;
     bottom: 0;
