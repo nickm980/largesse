@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">
+    <div class="main">
         <NavBar></NavBar>
         {{ $data.loading }}
         <section class="gen">
@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import { getPost } from '../services/posts.js';
 import NavBar from '../components/NavBar.vue';
+import {getPost} from '../services/posts.js';
 
 export default {
     data() {
@@ -64,7 +64,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.gen {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+}
 #title {
+    text-align: center;
     font-size: 2rem;
 }
 .flex-inline {
@@ -94,12 +100,16 @@ section {
 }
 
 .detailed {
+    margin: 0 auto;
+    max-width: 900px;
+    margin-top: 2rem;
     display: flex;
     align-items: flex-start;
 }
 
 .review-box:first {margin-top: 1em;}
 .review-box {
+    margin-top: 1rem;
     background-color: #dbd8d2;
     padding: 1em;
     border-radius: 10px;

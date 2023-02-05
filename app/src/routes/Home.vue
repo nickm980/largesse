@@ -1,9 +1,9 @@
 <template>
     <div class="main">
-        <section class="content">
+        <section>
             <NavBar></NavBar>
             <div class="desc">
-                <p class="description">VOLUNTEER | SERVICE</p>
+                <p class="description">VOLUNTEER | COMMUNITY</p>
                 <h1>LARGESSE</h1>
                 <p>
                     A platform to find volunteers and to volunteer in your local
@@ -11,10 +11,10 @@
                 </p>
                 <div class="aligned">
                     <router-link to="/serviceform">
-                        <button>OFFER SERVICES</button>
+                        <button>CREATE AN EVENT</button>
                     </router-link>
                     <router-link to="/findvolunteers">
-                        <button id="find">FIND VOLUNTEERS</button>
+                        <button id="find">VOLUNTEER</button>
                     </router-link>
                 </div>
             </div>
@@ -44,11 +44,10 @@ export default {
 }
 a:hover {
     border-radius: 5px;
-    background-color: #9e9377;
 }
 .description {
     letter-spacing: 5px;
-    line-height: 1;
+    line-height: 1.2rem;
     opacity: 0.5;
 }
 p {
@@ -78,17 +77,12 @@ button:hover {
     cursor: pointer;
 }
 .desc {
-    margin-top: 10em;
+    margin-top: 5em;
 }
 .desc p {
     max-width: 400px;
     opacity: 0.8;
 }
-.main {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 img {
     width: min(100%, 1350px);
     position: absolute;

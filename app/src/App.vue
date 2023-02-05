@@ -16,6 +16,11 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 * {
     padding: 0;
     margin: 0;
