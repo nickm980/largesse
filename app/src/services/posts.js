@@ -2,6 +2,7 @@ function getPost(){
     console.log("getpost");
     return {
         "companyName": "companyName",
+        "title": "Volunteer Event For Homeless Shelter" ,
         "reviews": [
             {
                 "name": "John",

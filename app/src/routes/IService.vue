@@ -3,13 +3,16 @@
         <NavBar></NavBar>
         {{ $data.loading }}
         <section class="gen">
-            <h2>Volunteer Event</h2>
+            <h2 id="title">{{post.title}}</h2>
             <div class="detailed">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94728.28670327867!2d-75.97379860041833!3d42.10192441950143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89daef72dfadb7d1%3A0x68f9703f7ed337f!2sBinghamton%2C%20NY!5e0!3m2!1sen!2sus!4v1675556245246!5m2!1sen!2sus"
                     width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h3>Company Name</h3>
+                <div class="two">
+                    <h3>{{post.companyName}}</h3>
+                    <p>{{post.description}}</p>
+                </div>
             </div>
         </section>
         <section>
@@ -57,6 +60,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#title {
+    font-size: 2rem;
+}
+.two {
+    padding-left: 1em;
+}
 h3{
     margin: 0 !important;
 }
@@ -69,8 +78,11 @@ section {
     align-items: flex-start;
 }
 
+.review-box:first {margin-top: 1em;}
 .review-box {
-    border: 1px solid rgba(0, 0, 0, 0.443);
+    background-color: #dbd8d2;
+    padding: 1em;
+    border-radius: 10px;
 }
 
 h3 {
