@@ -21,7 +21,6 @@
                     <p>{{ post.rating }}</p>
                     <p>{{ post.description }}</p>
                     <div class="flex-inline">
-                        <div class="phone-number">666-666-6666</div>
                         <div class="adress">{{ post.address }}</div>
                     </div>
                     <div class="spacer"></div>
@@ -53,7 +52,11 @@ import { getPost } from "../services/posts.js";
 export default {
     data() {
         return {
-            post: getPost(this.$route.params.title),
+            post: {
+                "title": "Binghamton Volunteering Center",
+                "description": "Volunteer for a location binghamton volunteering event",
+                "companyName": "Binghamton Company"
+            },
         };
     },
     mounted() {
