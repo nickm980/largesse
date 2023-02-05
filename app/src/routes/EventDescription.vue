@@ -130,6 +130,7 @@ button:hover {
 h3{
     margin: 0 !important;
 }
+
 section {
     max-width: 900px;
     margin: 0 auto;
@@ -157,7 +158,8 @@ section {
 h3 {
     margin: 40px 0 0;
 }
-
+.two p {
+    margin-top: .5em;}
 ul {
     list-style-type: none;
     padding: 0;

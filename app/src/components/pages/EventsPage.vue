@@ -1,6 +1,27 @@
 <template>
     <div class="main">
         <NotHomeNav></NotHomeNav>
+        <h2>Popular Categories</h2>
+        <div class="flex-major">
+            <div class="major one">
+                <p>Help Fight Animal Cruelty</p>
+                <h3>Animal Care</h3>
+                <div class="transparent">
+                </div>
+            </div>
+            <div class="major two">
+                <p>Save The World From Damage</p>
+                <h3>Climate Change</h3>
+                <div class="transparent">
+                </div>
+            </div>
+            <div class="major three">
+                <p>Help Fight Animal Cruelty</p>
+                <h3>Animal Care</h3>
+                <div class="transparent">
+                </div>
+            </div>
+        </div>
         <div class="grid">
             <div v-for="item in myJson" :key="item.placename" class="box-container">
                 <router-link :to="'/volunteer/' + item.placename">
@@ -19,7 +40,34 @@
 
 <style scoped>
 .box-container {
-   flex-basis: 33%;
+    flex-basis: 33%;
+}
+
+.major  {
+    background-image: url("@/assets/puppy.png");
+    background-size: cover;
+}
+.transparent {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.695);
+}
+.major h3 {
+    padding: 1rem;
+    padding-top: 2.2rem;
+    font-size: 2rem;
+
+    position: absolute;
+}
+
+.major p {
+    position: absolute;
+    padding: 1em;
+}
+.major {
+    color: rgb(220, 220, 220);
+    height: 250px;
+    cursor: pointer;
 }
 .grid {
     display: flex;
@@ -35,6 +83,7 @@
 .box:hover {
     border: 1px solid rgba(0, 0, 0, 0.44);
 }
+
 .box {
     flex-basis: 33.333333%;
     flex-grow: 1;
@@ -45,7 +94,17 @@
     border-radius: 10px;
     padding: 1em;
 }
+.flex-major {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
 
+    justify-content: center;
+    margin-top: 1em;
+}
+.flex-major .major {
+    flex-basis: 30%;
+}
 </style>
 <script>
 import NotHomeNav from '../NotHomeNav.vue';

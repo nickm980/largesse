@@ -61,7 +61,8 @@ h1 {
     position: absolute;
     top: 2rem;
     left: 2rem;
-    color: rgb(178, 178, 178);
+    color: white;
+    font-size: 100px;
 }
 
 .icon {

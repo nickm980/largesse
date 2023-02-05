@@ -3,7 +3,7 @@
         <section>
             <NavBar></NavBar>
             <div class="desc">
-                <p class="description">FOR THE GREATER COMMUNITY</p>
+                <p class="description">BUILDING A BETTER WORLD</p>
                 <h1 class="title">LARGESSE</h1>
                 <p class="notdesc">
                     A platform to find volunteers and to volunteer in your local

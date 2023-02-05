@@ -1,15 +1,44 @@
 <template>
     <ul class="links">
-        <li><DropDown :links="[
-            {'name': 'Climate Change', 'to': 'climate'}
-            ,{'name': 'Farm Work', 'to': 'farm'}
-            ,{'name': 'Environmental Conservation', 'to': 'conservation'}
-            ,{'name': 'Permaculture Projects', 'to': 'permaculture'}
-
-            ]">Environment</DropDown></li>
-        <li><DropDown :links="[]">Environment</DropDown></li>
-        <li><DropDown :links="[]">Environment</DropDown></li>
-        <li><DropDown :links="[]">Environment</DropDown></li>
+        <li>
+            <DropDown :links="[
+                { 'name': 'Climate Change', 'to': 'climate' }
+                , { 'name': 'Farm Work', 'to': 'farm' }
+                , { 'name': 'Environmental Conservation', 'to': 'conservation' }
+                , { 'name': 'Permaculture Projects', 'to': 'permaculture' }
+            
+            ]">Environmental</DropDown>
+        </li>
+        <li>
+            <DropDown :links="[
+                { 'name': 'Animal Farms', 'to': 'farms' }
+                , { 'name': 'Wildlife Conservation', 'to': 'conservation' }
+                , { 'name': 'Animal Rescue', 'to': 'rescue' }
+                , { 'name': 'Animal Care', 'to': 'care' }
+            
+            ]">Animals</DropDown>
+        </li>
+        <li>
+            <DropDown :links="[
+                { 'name': 'Volunteering with Young People', 'to': 'young' }
+                , { 'name': 'Teaching and Education', 'to': 'education' }
+                , { 'name': 'Community Development', 'to': 'community' }
+                , { 'name': 'Women’s Equity and Gender Empowerment', 'to': 'gender' }
+            
+            ]">Social Sector</DropDown>
+        </li>
+        <li>
+            <DropDown :links="[
+                { 'name': 'Volunteering with the Eldery', 'to': 'elderly' }
+                , { 'name': 'Counseling', 'to': 'counseling' }
+                , { 'name': 'Holistic Centers', 'to': 'holistic' }
+                , { 'name': 'Clinics', 'to': 'clinics' },
+                , { 'name': 'Mental Health', 'to': 'mental' },
+                , { 'name': 'Food Pantry', 'to': 'food' }
+                , { 'name': 'Shelters', 'to': 'shelters' },
+                , { 'name': 'Clothing', 'to': 'clothing' },
+            ]">Health Care & Other</DropDown>
+        </li>
     </ul>
 </template>
 
