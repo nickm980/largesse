@@ -4,35 +4,35 @@ import cookieSession from "cookie-session";
 const app = express();
 var events = [
     {
-        "placename": "Catholic Charities - Broome County/Mother Teresa's Cupboard - Food Distribution Center",
+        "title": "Catholic Charities - Broome County/Mother Teresa's Cupboard - Food Distribution Center",
         "address": "202 Garfield Ave, Endicott, NY 13760, United States",
         "place_id": "ChIJ__8Pi47s2okR4Kn9HSUCvUU",
         "category": "pantry",
         "rating": "4.8"
     },
     {
-        "placename": "Loaves and Fish Pantry",
+        "title": "Loaves and Fish Pantry",
         "address": "1262 Mill St, NY 13903, United States",
         "place_id": "ChIJ7yrGI2fv2okRxn0HpEswf4w",
         "rating": "5",
         "category": "pantry"
     },
     {
-        "placename": "Salvation Army",
+        "title": "Salvation Army",
         "address": "127 Washington St, Binghmaton,NY, United States",
         "place_id": "ChIJGWLRtm_v2okRMUdEvZv_s-E",
         "rating": "4.7",
         "category": "pantry"
     },
     {
-        "placename": "Northminster Presbyterian - Food Distribution Center",
+        "title": "Northminster Presbyterian - Food Distribution Center",
         "address": "711 Farm to Market Rd, Endicott, NY 13760, United States",
         "place_id": "ChIJ50peLbLt2okR9YFu3UUEX_8",
         "rating": "0",
         "category": "pantry"
     },
     {
-        "placename": "Saint Patrick's Roman Catholic Church - Food Distribution Center",
+        "title": "Saint Patrick's Roman Catholic Church - Food Distribution Center",
         "address": "50 Oak St, Binghamton, NY 13905, United States",
         "place_id": "ChIJ7U3pEmvv2okRrlWk___XgHQ",
         "rating": "4.5",
@@ -68,8 +68,9 @@ app.get("/health", (req, res) => {
     });
 });
 
-app.post("/event", (req, res) => {
+app.get("/event", (req, res) => {
     console.log(req.body)
+
     events.push({
         "isCustom": true,
         "fullName": req.query.name,
