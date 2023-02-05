@@ -1,24 +1,19 @@
 <template>
 
     <nav class="navbar">
-        <ul class="links">
-            <li><router-link to="/volunteer?q=environment">Environment</router-link></li>
-            <li><router-link to="/volunteer?q=animals">Animal Care</router-link></li>
-            <li><router-link to="/volunteer?q=social">Social</router-link></li>
-            <li><router-link to="/volunteer?q=healthcare">Healthcare</router-link></li>
-            <li><router-link to="/volunteer?q=all">All</router-link></li>
-        </ul>
+        <NavLinks></NavLinks>
         <div class="spacer"></div>
         <router-link to="/create"><button>CREATE EVENT</button></router-link>
     </nav>
 </template>
 
 <script>
+import NavLinks from './NavLinks.vue';
 export default {
     name: "NavBar",
-    props: {
-        msg: String,
-    },
+    components: {
+        NavLinks
+    }
 };
 </script>
 

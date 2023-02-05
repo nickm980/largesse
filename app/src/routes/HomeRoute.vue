@@ -5,7 +5,7 @@
             <div class="desc">
                 <p class="description">FOR THE GREATER COMMUNITY</p>
                 <h1 class="title">LARGESSE</h1>
-                <p>
+                <p class="notdesc">
                     A platform to find volunteers and to volunteer in your local
                     neighborhood. Aiding each other to build a better planet, for the local Binghamton community.
                 </p>
@@ -40,15 +40,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .aligned {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 a:hover {
     border-radius: 5px;
 }
+.notdesc {
+    color: #bab8b2;
+}
 .description {
+    
     letter-spacing: 5px;
     line-height: 1.2rem;
-    opacity: 0.5;
+    color: #8c7e67;
 }
 p {
     line-height: 1.75em;
@@ -93,7 +97,7 @@ button:hover {
     margin-top: 5em;
 }
 .desc p {
-    max-width: 400px;
+    max-width: 450px;
     opacity: 0.8;
 }
 img {

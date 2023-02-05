@@ -1,8 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "./routes/Home.vue";
-import IService from "./routes/IService.vue";
-import ServiceForm from "./routes/ServiceForm.vue";
-import FindVolunteers from "./routes/FindVolunteers.vue";
+import Home from "./routes/HomeRoute.vue";
+import IService from "./routes/EventDescription.vue";
+import ServiceForm from "./routes/CreateEventForm.vue";
+import EventsPage from "./components/pages/EventsPage.vue";
 
 const routes = [
     {
@@ -23,7 +23,7 @@ const routes = [
     {
         path: "/volunteer",
         name: "Volunteer",
-        component: FindVolunteers,
+        component: EventsPage,
     },
 ];
 

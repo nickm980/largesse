@@ -1,10 +1,10 @@
 <template>
     <ul class="links">
         <li><DropDown :links="[
-            {'name': 'Climate Change', 'to': 'a'}
-            ,{'name': 'Farm Work', 'to': 'b'}
-            ,{'name': 'Environmental Conservation', 'to': 'b'}
-            ,{'name': 'Permaculture Projects', 'to': 'b'}
+            {'name': 'Climate Change', 'to': 'climate'}
+            ,{'name': 'Farm Work', 'to': 'farm'}
+            ,{'name': 'Environmental Conservation', 'to': 'conservation'}
+            ,{'name': 'Permaculture Projects', 'to': 'permaculture'}
 
             ]">Environment</DropDown></li>
         <li><DropDown :links="[]">Environment</DropDown></li>

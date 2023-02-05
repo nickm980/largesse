@@ -48,8 +48,8 @@
 
 </style>
 <script>
-import NotHomeNav from './NotHomeNav.vue';
-import data from "../data/testData.json";
+import NotHomeNav from '../NotHomeNav.vue';
+import data from "../../data/testData.json";
 export default {
     components: {
         NotHomeNav,

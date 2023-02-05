@@ -33,7 +33,7 @@ a {
 }
 
 #logoimg {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: -15px;
     left: 50px;
     width: 200px !important;

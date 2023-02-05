@@ -55,10 +55,5 @@ app.get("/events/:category", (req, res) => {
     })
 });
 
-app.post("/register", (req, res)=>{
-
-    
-});
-
 
 app.listen(3000)

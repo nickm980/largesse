@@ -138,5 +138,7 @@ input[type="submit"] {
     color: #ece9e4;
     margin-top: 3rem;
     cursor: pointer;
+    letter-spacing: 1.5px;
 }
+
 </style>

@@ -18,15 +18,15 @@ export default {
     props: {
         links: []
     },
-    data () {
-      return {
-        active: false
-      }
+    data() {
+        return {
+            active: false
+        }
     },
     methods: {
-      toggle () {
-        this.active = !this.active
-      }
+        toggle() {
+            this.active = !this.active
+        }
     }
 }
 </script>
@@ -36,22 +36,22 @@ export default {
     font-size: 16px;
     position: absolute;
     top: -.6em;
-    opacity: .2;
+    color: #e5e3df;
 }
 button {
     font-weight: bold;
-    opacity: .4;
     font-size: .8rem;
     border-radius: 5px !important;
     padding: .5em;
     outline: none;
     border: none;
+    color: #bab8b2;
     background-color: transparent;
 }
 button:hover, .dropdownActive {
     cursor: pointer;
     border-radius: 5px !important;
-    background-color: rgba(0, 0, 0, 0.058);
+    background-color: #e5e3df;
 }
 .link  {
     min-width: 100px;
@@ -61,9 +61,9 @@ button:hover, .dropdownActive {
 }
 .link:hover {
 
-    background-color: rgba(128, 128, 128, 0.376);
-}
+    background-color: rgb(194, 187, 187)}
 a {
+    font-size: .8rem;
     padding: .5em;
 }
 button:hover .links {
@@ -71,11 +71,12 @@ button:hover .links {
 }
 
 .links {
+    z-index: 2;
     height: auto;
     min-width: 150px;
-    background-color: rgba(0, 0, 0, 0.158);
-    opacity: .5;
+    background-color: #e5e3df;
     border-radius: 5px;
+    color: grey;
     padding: .5em;
     margin-top: 1em;
     position: absolute;
