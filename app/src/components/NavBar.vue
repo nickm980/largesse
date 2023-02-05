@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style>
+a {
+    text-decoration: none;
+    color: black;
+    opacity: .6;
+    font-weight: 700;
+}
 #logoimg {
     font-weight: bold;
 }

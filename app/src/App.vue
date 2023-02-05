@@ -23,7 +23,8 @@ export default {
 
 body {
     background: #eeebe6;
-    padding-left: 2em;
+    padding: 2em;
+    padding-top: 0;
 }
 
 h1 {

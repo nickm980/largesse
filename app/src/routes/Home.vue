@@ -33,13 +33,21 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
+
   .aligned {
     margin-top: 1em;
+  }
+  a:hover {
+    border-radius: 5px;
+    background-color: #9e9377;
   }
   .description {
     letter-spacing: 5px;
     line-height: 1;
     opacity: .5;
+  }
+  p {
+    line-height: 1.75em;
   }
   p {
     margin-top: .5em;
