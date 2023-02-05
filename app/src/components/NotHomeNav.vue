@@ -1,7 +1,7 @@
 <template>
 
     <nav class="navbar">
-        <NavLinks></NavLinks>
+        <NavLinks class="m"></NavLinks>
         <div class="spacer"></div>
         <router-link to="/create"><button>CREATE EVENT</button></router-link>
     </nav>
@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style scoped>
+.m {
+    margin-left: -1rem;
+}
 button {
     outline: none;
     background-color: transparent;
