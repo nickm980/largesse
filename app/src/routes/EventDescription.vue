@@ -1,24 +1,15 @@
 <template>
     <div class="main">
         <NotHomeNav></NotHomeNav>
-        {{ $data.loading }}
         <section class="gen">
             <h2 id="title">{{ post.title }}</h2>
             <div class="detailed">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94728.28670327867!2d-75.97379860041833!3d42.10192441950143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89daef72dfadb7d1%3A0x68f9703f7ed337f!2sBinghamton%2C%20NY!5e0!3m2!1sen!2sus!4v1675556245246!5m2!1sen!2sus"
-                    width="450"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                    width="450" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="two">
                     <h3>{{ post.companyName }}</h3>
-                    <p>Binghamton Animal</p>
-                    <p>{{ post.address }}</p>
-                    <p>{{ post.rating }}</p>
                     <p>{{ post.description }}</p>
                     <div class="flex-inline">
                         <div class="adress">{{ post.address }}</div>
@@ -47,31 +38,12 @@
 
 <script>
 import NotHomeNav from "../components/NotHomeNav.vue";
-import { getPost } from "../services/posts.js";
 
 export default {
-    data() {
-        return {
-            post: {
-                "title": "Binghamton Volunteering Center",
-                "description": "Volunteer for a location binghamton volunteering event",
-                "companyName": "Binghamton Company"
-            },
-        };
+    props: {
+        post: {}
     },
-    mounted() {
-        this.fetchData();
-    },
-    methods: {
-        fetchData() {
-            this.error = this.post = null;
-            this.loading = true;
 
-            getPost(this.$route.params.id, (post) => {
-                this.post = post;
-            });
-        },
-    },
     components: {
         NotHomeNav,
     },
@@ -84,20 +56,25 @@ export default {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
+
 .registered {
     font-style: italic;
 }
+
 .b {
     font-weight: bold;
 }
+
 .gen {
     margin: 0 auto;
     margin-top: 2rem;
 }
+
 #title {
     text-align: center;
     font-size: 2rem;
 }
+
 button {
     outline: none;
     background-color: transparent;
@@ -110,22 +87,27 @@ button {
     letter-spacing: 2px;
     font-size: 0.8rem;
 }
+
 button:not(#find) {
     background-color: #9e9377;
     color: #eeebe6;
 }
+
 #find {
     margin-left: 10px;
 }
+
 button:hover {
     filter: brightness(0.8);
     cursor: pointer;
 }
+
 .flex-inline {
     display: flex;
     flex-direction: row;
     margin-top: 1em;
 }
+
 .flex-inline div {
     flex-grow: 1;
     font-weight: bold;
@@ -140,6 +122,7 @@ button:hover {
     flex-direction: column;
     padding-left: 1em;
 }
+
 h3 {
     margin: 0 !important;
 }
@@ -162,6 +145,7 @@ section {
 .review-box:first {
     margin-top: 1em;
 }
+
 .review-box {
     margin-top: 1rem;
     background-color: #dbd8d2;
@@ -172,9 +156,11 @@ section {
 h3 {
     margin: 40px 0 0;
 }
+
 .two p {
     margin-top: 0.5em;
 }
+
 ul {
     list-style-type: none;
     padding: 0;

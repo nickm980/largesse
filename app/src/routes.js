@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "./routes/HomeRoute.vue";
-import IService from "./routes/EventDescription.vue";
+import EventDescription from "./components/pages/EventDescription.vue";
 import ServiceForm from "./routes/CreateEventForm.vue";
 import EventsPage from "./components/pages/EventsPage.vue";
 
@@ -13,7 +13,7 @@ const routes = [
     {
         path: "/volunteer/:id",
         name: "About",
-        component: IService,
+        component: EventDescription,
     },
     {
         path: "/create",
