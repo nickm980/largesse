@@ -1,9 +1,9 @@
 # Largesse
 3rd place runner ups for Best Civic Engagement Hack Sponsored by J.P. Morgan. We set up to create a platform that allows those in need to connect with their neighbors and local resources. For both people that are in need of help as well as those who are looking for others to land a helping hand.
 
-Worked in a team of 4 to develop the project in under 24 hours at HackBU 2023
-
 ## How we built it
+We worked in a team of 4 and frequently pushed changes to this and one other github repository. We generated the images for the site using AI assisted tools and used those images as a base for our design and logo.  
+
 ### Frameworks & APIs: 
 Vue.js, Express, Google Maps API
 
