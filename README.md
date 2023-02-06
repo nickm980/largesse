@@ -2,7 +2,7 @@
 3rd place runner ups for Best Civic Engagement Hack Sponsored by J.P. Morgan. We set up to create a platform that allows those in need to connect with their neighbors and local resources. For both people that are in need of help as well as those who are looking for others to land a helping hand.
 
 ## How we built it
-We worked in a team of 4 and frequently pushed changes to this and one other github repository. We generated prompts for the images to fit the theme of our idea using AI assisted tools and worked off of those images to conceptualize a design.  
+As a team of four, we split up and worked in two teams: one team working on the python api and the other on the frontend/backend with Vue.js and node (as seen in this repository). We frequently pushed changes to this repository. During the design process, we brainstormed ideas for what we wanted the site to feel like and then generated prompts for the images to fit the theme of our idea using AI assisted tools. We worked off of those images to conceptualize the landing page but due to time constraints designed the other pages mostly without the tools.  
 
 ### Frameworks & APIs: 
 Vue.js, Express, Google Maps API
