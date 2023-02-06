@@ -7,7 +7,7 @@ As a team of four, we split up and worked in two teams: one team working on the 
 ### Frameworks & APIs: 
 Vue.js, Express, Google Maps API
 
-### Languages
+### Languages For Entire Project (Including the other repository)
 JavaScript, Python, HTML, CSS
 
 ![image](https://user-images.githubusercontent.com/81270095/216854563-bef8312d-74f4-4736-b2d3-09bcdcab95d7.png)
