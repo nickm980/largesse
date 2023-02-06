@@ -3,6 +3,13 @@
 
 Worked in a team of 4 to develop the project in under 24 hours at HackBU 2023
 
+## How we built it
+### Frameworks & APIs: 
+Vue.js, Express, Google Maps API
+
+### Languages
+JavaScript, Python, HTML, CSS
+
 ![image](https://user-images.githubusercontent.com/81270095/216854563-bef8312d-74f4-4736-b2d3-09bcdcab95d7.png)
 ![image](https://user-images.githubusercontent.com/81270095/216854569-a7ec68b0-f91a-44fc-a230-8799d46741d7.png)
 ![image](https://user-images.githubusercontent.com/81270095/216854573-43f39169-fc70-4052-a559-8145ca0fdf8a.png)
