@@ -1,0 +1,39 @@
+version: "3.1"
+
+services:
+  app:
+    image: node:lts-alpine
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    command: npm run start
+    ports:
+      - 8080:8080
+  server:
+    image: maven:3.8.1-openjdk-11-slim
+    command: mvn spring-boot:run
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql:db:3306/largesse
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      #SPRING_DATASOURCE_HIBERNATE_DDL_AUTO: update
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+      - maven-repo:/root/.m2
+    ports:
+      - 8080:8081
+    depends_on:
+      - db
+    restart: on-failure:10
+  db:
+    image: mysql:8.1.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: largesse
+    ports:
+      - 3306:3306
+
+volumes:
+  maven-repo:
