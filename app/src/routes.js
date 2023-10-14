@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "./routes/HomeRoute.vue";
-import EventDescription from "./components/pages/EventDescription.vue";
+import EventDescription from "./routes/EventDescription.vue";
 import ServiceForm from "./routes/CreateEventForm.vue";
 import EventsPage from "./components/pages/EventsPage.vue";
 
