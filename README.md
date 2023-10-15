@@ -11,7 +11,6 @@ Vue.js, Express, Google Maps API
 ![image](https://user-images.githubusercontent.com/81270095/216854569-a7ec68b0-f91a-44fc-a230-8799d46741d7.png)
 ![image](https://user-images.githubusercontent.com/81270095/216854573-43f39169-fc70-4052-a559-8145ca0fdf8a.png)
 
-
-
-
-
+### To run:
+Must have Docker and docker-compose installed.
+Run the command: sudo docker-compose up
