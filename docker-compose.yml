@@ -11,9 +11,8 @@ services:
       - 8080:8080
   server:
     image: maven:3.8.1-openjdk-11-slim
-    command: ./wait-for-db.sh
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/largesse
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/largesse
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
@@ -26,14 +25,22 @@ services:
     ports:
       - 8081:8080
     depends_on:
-      - db
+      db:
+        condition: service_healthy
   db:
     image: mysql:8.1.0
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: largesse
+      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "largesse"
     ports:
-      - 3306:3306
+      - 3307:3306
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+      start_period: 10s 
 
 volumes:
   maven-repo:
