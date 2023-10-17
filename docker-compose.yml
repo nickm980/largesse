@@ -17,8 +17,8 @@ services:
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
-      SPRING_DATASOURCE_HIBERNATE_DDL_AUTO: update
-      #SPRING_DATASOURCE_INITIALIZATION_MODE: always
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_SQL_INIT_MODE: always
     working_dir: /app
     volumes:
       - ./backend:/app
@@ -36,11 +36,11 @@ services:
     ports:
       - 3307:3306
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       interval: 3s
       timeout: 5s
       retries: 10
-      start_period: 10s 
+      start_period: 10s
 
 volumes:
   maven-repo:
