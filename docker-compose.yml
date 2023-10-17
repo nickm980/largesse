@@ -11,8 +11,9 @@ services:
       - 8080:8080
   server:
     image: maven:3.8.1-openjdk-11-slim
+    command: mvn spring-boot:run
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/largesse
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/largesse
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
