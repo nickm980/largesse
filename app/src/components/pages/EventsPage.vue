@@ -133,6 +133,7 @@ h2 {
 </style>
 <script>
 import NotHomeNav from '../NotHomeNav.vue';
+import { getPostsByCategory } from '../../services/posts.js';
 
 export default {
     components: {
@@ -140,16 +141,17 @@ export default {
     },
     data() {
         return {
-            myData: [
-                {
-                    "title": "Binghamton Animal Shelter",
-                    "description": "We are need of volunteers who can help us with our animals"
-                },
-                {
-                    "title": "Binghamton Food Pantry",
-                    "description": "We are need of volunteers who can help us with our food pantry"
-                }
-            ]
+            myData: getPostsByCategory("category1")
+            // myData: [
+            //     {
+            //         "title": "Binghamton Animal Shelter",
+            //         "description": "We are need of volunteers who can help us with our animals"
+            //     },
+            //     {
+            //         "title": "Binghamton Food Pantry",
+            //         "description": "We are need of volunteers who can help us with our food pantry"
+            //     }
+            // ]
         }
     },
 };

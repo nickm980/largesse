@@ -6,25 +6,25 @@ async function getPosts() {
         }
     ];
 }
-    // return {
-    //     companyName: "companyName",
-    //     title: "Volunteer Event For Homeless Shelter",
-    //     reviews: [
-    //         {
-    //             name: "John",
-    //             reason: "Reason",
-    //             rating: 5,
-    //         },
-    //     ],
-    //     description:
-    //         "Description of an event which happens to be a community service event Description of an event which happens to be a community service event.",
-    //     location: "location",
-    // };
+// return {
+//     companyName: "companyName",
+//     title: "Volunteer Event For Homeless Shelter",
+//     reviews: [
+//         {
+//             name: "John",
+//             reason: "Reason",
+//             rating: 5,
+//         },
+//     ],
+//     description:
+//         "Description of an event which happens to be a community service event Description of an event which happens to be a community service event.",
+//     location: "location",
+// };
 
 
-async function getPostsByCategory(title) {
-    console.log(title);
-    const response = await fetch(`https://localhost:3000/events/${title}`);
+async function getPostsByCategory(category) {
+    console.log(category);
+    const response = await fetch(`https://server:8081/api/v1/event/category/${category}`);
     return response;
     // return {
     //     companyName: "companyName",

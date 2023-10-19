@@ -9,7 +9,10 @@ public class EventConfig {
     @Bean
     CommandLineRunner commandLineRunner(EventRepository eventRepository) {
         return args -> {
-            eventRepository.save(new Event("place", "organizer", "organization", "address", "category", "description"));
+            eventRepository
+                    .save(new Event("place1", "organizer1", "organization1", "address1", "category1", "description1"));
+            eventRepository
+                    .save(new Event("place2", "organizer2", "organization2", "address2", "category2", "description2"));
         };
     }
 }

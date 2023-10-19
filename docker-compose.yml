@@ -19,6 +19,7 @@ services:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_SQL_INIT_MODE: always
+      SERVER_ADDRESS: 0.0.0.0
     working_dir: /app
     volumes:
       - ./backend:/app
