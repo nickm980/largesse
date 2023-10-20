@@ -141,7 +141,7 @@ export default {
     },
     data() {
         return {
-            myData: getPostsByCategory("category1")
+            myData: []
             // myData: [
             //     {
             //         "title": "Binghamton Animal Shelter",
@@ -154,5 +154,14 @@ export default {
             // ]
         }
     },
+    async created() {
+        try {
+            this.myData = await getPostsByCategory("category1")
+            console.log(this.myData)
+        }
+        catch (error) {
+            console.log(`Error fetching posts: ${error}`)
+        }
+    }
 };
 </script>

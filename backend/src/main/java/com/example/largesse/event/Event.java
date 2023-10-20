@@ -12,6 +12,7 @@ public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String title;
     private String place;
     private String organizer;
     private String organization;
@@ -23,8 +24,9 @@ public class Event {
 
     }
 
-    public Event(String place, String organizer, String organization, String address, String category,
-            String description) {
+    public Event(String title, String place, String organizer, String organization, String address,
+            String category, String description) {
+        this.title = title;
         this.place = place;
         this.organizer = organizer;
         this.organization = organization;
@@ -39,6 +41,14 @@ public class Event {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getPlace() {

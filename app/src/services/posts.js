@@ -24,8 +24,8 @@ async function getPosts() {
 
 async function getPostsByCategory(category) {
     console.log(category);
-    const response = await fetch(`https://server:8081/api/v1/event/category/${category}`);
-    return response;
+    const response = await fetch(`http://localhost:8081/api/v1/event/category/${category}`);
+    return await response.json();
     // return {
     //     companyName: "companyName",
     //     title: "Volunteer Event For Homeless Shelter",
