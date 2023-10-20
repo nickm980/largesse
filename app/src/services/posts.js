@@ -23,7 +23,6 @@ async function getPosts() {
 
 
 async function getPostsByCategory(category) {
-    console.log(category);
     const response = await fetch(`http://localhost:8081/api/v1/event/category/${category}`);
     return await response.json();
     // return {

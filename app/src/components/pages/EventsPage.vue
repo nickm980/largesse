@@ -156,8 +156,7 @@ export default {
     },
     async created() {
         try {
-            this.myData = await getPostsByCategory("category1")
-            console.log(this.myData)
+            this.myData = await getPostsByCategory(`${this.$route.query.q}`)
         }
         catch (error) {
             console.log(`Error fetching posts: ${error}`)
