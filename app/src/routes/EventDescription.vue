@@ -38,15 +38,27 @@
 
 <script>
 import NotHomeNav from "../components/NotHomeNav.vue";
+import { getPost } from '../services/posts';
 
 export default {
-    props: {
-        post: {}
+    data() {
+        return {
+            post: {}
+        }
     },
-
+    async created() {
+        try {
+            let path = this.$route.fullPath
+            let id = path.match(/event\/(.+)$/)[1]
+            this.post = await getPost(id)
+        }
+        catch (error) {
+            console.log(error)
+        }
+    },
     components: {
         NotHomeNav,
-    },
+    }
 };
 </script>
 

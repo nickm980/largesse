@@ -11,8 +11,8 @@ const routes = [
         component: Home,
     },
     {
-        path: "/volunteer/:id",
-        name: "About",
+        path: "/event/:id",
+        name: "Event",
         component: EventDescription,
     },
     {

@@ -25,7 +25,7 @@
         <h2>{{ $route.query.q }} Volunteering Events</h2>
         <div class="grid">
             <div v-for="item in myData" :key="item.title" class="box-container">
-                <router-link :to="'/volunteer/' + item.title">
+                <router-link :to="'/event/' + item.id">
                     <div class="box">
                         <p class="title">{{ item.title == null ? item.title : item.title }}</p>
                         <p class="desc">{{ item.description }}</p>

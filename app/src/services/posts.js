@@ -41,4 +41,9 @@ async function getPostsByCategory(category) {
     // };
 }
 
-export { getPosts, getPostsByCategory };
+async function getPost(id) {
+    const response = await fetch(`http://localhost:8081/api/v1/event/${id}`)
+    return await response.json()
+}
+
+export { getPost, getPosts, getPostsByCategory };

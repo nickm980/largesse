@@ -1,6 +1,7 @@
 package com.example.largesse.event;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,14 @@ public class EventService {
         this.eventRepository = eventRepository;
     }
 
+    public Event getEvent(Long id) {
+        try {
+            return eventRepository.findById(id).get();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public List<Event> getEvents() {
         return eventRepository.findAll();
     }
@@ -28,6 +37,24 @@ public class EventService {
                 result.add(event);
             }
         }
+        return result;
+    }
+
+    public Long postEvent() {
+        Event e = new Event();
+        if (eventRepository.save(e).equals(e)) {
+            return e.getId();
+        }
+        return -1L;
+    }
+
+    public List<String> getCategories() {
+        HashSet<String> categories = new HashSet<String>();
+        List<Event> events = eventRepository.findAll();
+        for (Event event : events) {
+            categories.add(event.getCategory());
+        }
+        List<String> result = new ArrayList<String>(categories);
         return result;
     }
 }

@@ -26,28 +26,31 @@
             <div class="container">
                 <h1>Create A New Event</h1>
                 <p>Easiest way to get volunteers to help you with your event</p>
-                <form action="http://localhost:3000/event" id="form" method="POST" target="_blank">
+                <form action="http://localhost:8081/api/v1/event" id="form" method="POST" target="_blank">
                     <div class="flex"></div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" />
+
+                    <label for="place">Place</label>
+                    <input type="text" id="place" name="place" />
+
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" />
 
-                    <label for="name">Company Name</label>
-                    <input type="text" id="companyName" name="companyName" />
+                    <label for="name">Organization</label>
+                    <input type="text" id="organization" name="organization" />
 
                     <label for="address">Address</label>
                     <input type="text" id="address" name="address" />
                     
+                    <label for="select">Category</label>
+                    <select  name="category" id="select" form="form">
+                        <option v-for="category in categories" :key="category" value="category">{{category}}</option>
+                      </select>
+
                     <label for="name">Brief Description</label>
                     <input type="text" id="description" name="description" />
 
-                    <label for="select">Category</label>
-
-                    <select name="category" id="select" form="form">
-                        <option value="volvo">Animal Care</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
-                      </select>
                     <input type="submit" value="SUBMIT" />
                 </form>
             </div>
@@ -56,7 +59,21 @@
     </div>
 </template>
 
-<script></script>
+<script>
+import { getCategories } from '@/services/misc';
+
+export default {
+    data() {
+        return {
+            categories: []
+        }
+    },
+    async created() {
+        this.categories = await getCategories()
+    }
+}
+</script>
+
 
 
 <style scoped>
