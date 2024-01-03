@@ -1,6 +1,6 @@
 <template>
     <div id="outermost-container_">
-        <Header />
+        <NavBar />
         <slot />
         <Footer />
     </div>

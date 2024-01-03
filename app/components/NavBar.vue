@@ -16,7 +16,7 @@ const data = [
     {
         title: "Environment",
         content: [
-            { title: "Climate Change", link: "climate" },
+            { title: "Climate Change", link: "/events/climate" },
             { title: "test2", link: "link2" },
         ],
     },
