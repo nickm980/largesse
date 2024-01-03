@@ -1,6 +1,6 @@
 <template>
     <div id="container">
-        <h1>Footer</h1>
+        <p>Largesse</p>
     </div>
 </template>
 

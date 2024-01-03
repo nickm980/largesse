@@ -1,6 +1,8 @@
 <template>
     <div id="container">
-        <img id="image" src="/static/logo.jpg" />
+        <NuxtLink to="/">
+            <img id="image" src="/static/logo.jpg" />
+        </NuxtLink>
         <Dropdown
             v-for="item in data"
             :title="item.title"
