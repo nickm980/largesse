@@ -1,6 +1,6 @@
 <template>
     <div id="container">
-        <img src="/static/logo.jpg" />
+        <img id="image" src="/static/logo.jpg" />
         <Dropdown
             v-for="item in data"
             :title="item.title"
@@ -14,7 +14,7 @@ const data = [
     {
         title: "Environment",
         content: [
-            { title: "test1", link: "link1" },
+            { title: "Climate Change", link: "climate" },
             { title: "test2", link: "link2" },
         ],
     },
@@ -52,8 +52,11 @@ const data = [
 <style>
 #container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background: red;
+}
+
+#image {
+    max-width: 200px;
 }
 </style>
