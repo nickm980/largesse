@@ -30,7 +30,7 @@
                 <input type="text" id="place" name="place" />
 
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" />
+                <input type="text" id="organizer" name="organizer" />
 
                 <label for="name">Organization</label>
                 <input type="text" id="organization" name="organization" />
