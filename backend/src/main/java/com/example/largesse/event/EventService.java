@@ -1,13 +1,13 @@
 package com.example.largesse.event;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.largesse.event.exceptions.EventNotCreatedException;
 import com.example.largesse.event.exceptions.EventNotFoundException;
 
 @Service
@@ -48,17 +48,8 @@ public class EventService {
         Event e = new Event();
         if (eventRepository.save(e).equals(e)) {
             return e.getId();
+        } else {
+            throw new EventNotCreatedException("Event either malformed or couldn't be created");
         }
-        return -1L;
-    }
-
-    public List<String> getCategories() {
-        HashSet<String> categories = new HashSet<String>();
-        List<Event> events = eventRepository.findAll();
-        for (Event event : events) {
-            categories.add(event.getCategory());
-        }
-        List<String> result = new ArrayList<String>(categories);
-        return result;
     }
 }

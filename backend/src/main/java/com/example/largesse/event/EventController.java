@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.largesse.event.exceptions.CategoryNotFoundException;
-import com.example.largesse.event.exceptions.EventNotFoundException;
-
 @RestController
 @RequestMapping("/api/v1/event")
 public class EventController {
@@ -44,17 +41,7 @@ public class EventController {
     @PostMapping
     public ResponseEntity<Void> postEvent(@RequestBody Event event) {
         Long id = eventService.postEvent();
-        if (id > 0) {
-            return ResponseEntity.status(201).header("Location", "http://localhost:8080/event/" + id.toString())
-                    .build();
-        }
-        return ResponseEntity.status(500).build();
-
+        return ResponseEntity.status(201).header("Location", "http://localhost:8080/event/" + id.toString())
+                .build();
     }
-
-    @GetMapping("/categories")
-    public List<String> getCategories() {
-        return eventService.getCategories();
-    }
-
 }

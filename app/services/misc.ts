@@ -8,23 +8,16 @@ async function getPosts() {
     ];
 }
 
-async function getPost(id) {
+async function getPost(id: string) {
     const response = await fetch(`http://localhost:8081/api/v1/event/${id}`);
     return await response.json();
 }
 
-async function getCategories() {
-    const response = await fetch(
-        "http://localhost:8081/api/v1/event/categories"
-    );
-    return await response.json();
-}
-
-async function getPostsByCategory(category) {
+async function getPostsByCategory(category: string) {
     const response = await fetch(
         `http://localhost:8081/api/v1/event/category/${category}`
     );
     return await response.json();
 }
 
-export { getPosts, getPost, getCategories, getPostsByCategory };
+export { getPosts, getPost, getPostsByCategory };

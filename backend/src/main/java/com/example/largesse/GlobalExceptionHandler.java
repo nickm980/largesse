@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.example.largesse.event.exceptions.CategoryNotFoundException;
+import com.example.largesse.event.exceptions.EventNotCreatedException;
 import com.example.largesse.event.exceptions.EventNotFoundException;
 
 @ControllerAdvice
@@ -16,6 +17,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(CategoryNotFoundException.class)
     public ResponseEntity<String> handleCategoryNotFoundException(EventNotFoundException exception) {
+        return ResponseEntity.status(404).body(exception.getMessage());
+    }
+
+    @ExceptionHandler(EventNotCreatedException.class)
+    public ResponseEntity<String> handleEventNotCreatedException(EventNotFoundException exception) {
         return ResponseEntity.status(404).body(exception.getMessage());
     }
 
