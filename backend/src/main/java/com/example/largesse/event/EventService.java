@@ -3,9 +3,12 @@ package com.example.largesse.event;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.largesse.event.exceptions.EventNotFoundException;
 
 @Service
 public class EventService {
@@ -18,10 +21,11 @@ public class EventService {
     }
 
     public Event getEvent(Long id) {
-        try {
-            return eventRepository.findById(id).get();
-        } catch (Exception e) {
-            return null;
+        Optional<Event> optionalEvent = eventRepository.findById(id);
+        if (optionalEvent.isPresent()) {
+            return optionalEvent.get();
+        } else {
+            throw new EventNotFoundException("Event not found for ID: " + id);
         }
     }
 

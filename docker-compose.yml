@@ -6,7 +6,7 @@ services:
     working_dir: /app
     volumes:
       - ./app:/app
-    command: npm run serve
+    command: npm run dev
     ports:
       - 8080:8080
   server:
