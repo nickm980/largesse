@@ -21,7 +21,11 @@
         <div class="right-container">
             <h1>Create A New Event</h1>
             <p>Easiest way to get volunteers to help you with your event</p>
-            <form action="http://localhost:8081/api/v1/event" id="form" method="POST" target="_blank">
+            <form
+                action="http://localhost:8081/api/v1/event"
+                id="form"
+                method="POST"
+            >
                 <div class="flex"></div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" />
@@ -40,7 +44,11 @@
 
                 <label for="select">Category</label>
                 <select name="category" id="select" form="form">
-                    <option v-for="category in categories" :key="category" value="category">
+                    <option
+                        v-for="category in categories"
+                        :key="category"
+                        value="category"
+                    >
                         {{ category }}
                     </option>
                 </select>
@@ -55,7 +63,27 @@
 </template>
 
 <script setup>
-let categories = ["climate", "farming", "conservation", "permaculture", "rescue", "care", "children", "education", "gender", "animals", "elderly", "counseling", "holistic", "community", "mental", "food", "shelters", "clothing", "clinics"];
+let categories = [
+    "climate",
+    "farming",
+    "conservation",
+    "permaculture",
+    "rescue",
+    "care",
+    "children",
+    "education",
+    "gender",
+    "animals",
+    "elderly",
+    "counseling",
+    "holistic",
+    "community",
+    "mental",
+    "food",
+    "shelters",
+    "clothing",
+    "clinics",
+];
 </script>
 
 <style scoped>

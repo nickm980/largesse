@@ -44,10 +44,9 @@ public class EventService {
         return result;
     }
 
-    public Long postEvent() {
-        Event e = new Event();
-        if (eventRepository.save(e).equals(e)) {
-            return e.getId();
+    public Long postEvent(Event event) {
+        if (eventRepository.save(event).equals(event)) {
+            return event.getId();
         } else {
             throw new EventNotCreatedException("Event either malformed or couldn't be created");
         }

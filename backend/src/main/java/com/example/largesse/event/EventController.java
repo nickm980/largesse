@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,9 +40,9 @@ public class EventController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> postEvent(@RequestBody Event event) {
-        Long id = eventService.postEvent();
-        return ResponseEntity.status(201).header("Location", "http://localhost:8080/event/" + id.toString())
+    public ResponseEntity<Void> postEvent(@ModelAttribute Event event) {
+        Long id = eventService.postEvent(event);
+        return ResponseEntity.status(303).header("Location", "http://localhost:8080/event/" + id.toString())
                 .build();
     }
 }

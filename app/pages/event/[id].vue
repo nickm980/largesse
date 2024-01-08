@@ -34,6 +34,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { useRoute } from "#app";
 import { getPost } from "../services/misc";
 
 const post = ref({
@@ -45,9 +46,9 @@ const post = ref({
 
 onMounted(async () => {
     try {
-        let path = this.$route.fullPath;
-        let id = path.match(/event\/(.+)$/)[1];
-        this.post = await getPost(id);
+        const route = useRoute();
+        let id = route.params.id;
+        post.value = await getPost(id);
     } catch (error) {
         console.log(error);
     }

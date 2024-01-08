@@ -3,7 +3,11 @@
         <NuxtLink to="/">
             <img id="image" src="/static/logo.jpg" />
         </NuxtLink>
-        <Dropdown v-for="item in data" :title="item.title" :content="item.content" />
+        <Dropdown
+            v-for="item in data"
+            :title="item.title"
+            :content="item.content"
+        />
     </div>
 </template>
 
@@ -14,7 +18,10 @@ const data = [
         content: [
             { title: "Climate Change", link: "/events/climate" },
             { title: "Farm Work", link: "/events/farming" },
-            { title: "Environmental Conservation", link: "/events/conservation" },
+            {
+                title: "Environmental Conservation",
+                link: "/events/conservation",
+            },
             { title: "Permaculture Projects", link: "/events/permaculture" },
         ],
     },
@@ -30,28 +37,31 @@ const data = [
     {
         title: "Social",
         content: [
-            { title: "Volunteering with Young People", link: "young" },
-            { title: "Teaching and Education", link: "education" },
-            { title: "Community Development", link: "community" },
-            { title: "Women's Equity and Gender Empowerment", link: "gender" },
+            { title: "Volunteering with Young People", link: "/events/young" },
+            { title: "Teaching and Education", link: "/events/education" },
+            { title: "Community Development", link: "/events/community" },
+            {
+                title: "Women's Equity and Gender Empowerment",
+                link: "/eventsgender",
+            },
         ],
     },
     {
         title: "Health Care",
         content: [
-            { title: "Volunteering with the Elderly", link: "elderly" },
-            { title: "Counseling", link: "counseling" },
-            { title: "Holistic Centers", link: "holistic" },
-            { title: "Clinics", link: "clinics" },
+            { title: "Volunteering with the Elderly", link: "/events/elderly" },
+            { title: "Counseling", link: "/events/counseling" },
+            { title: "Holistic Centers", link: "/events/holistic" },
+            { title: "Clinics", link: "/events/clinics" },
         ],
     },
     {
         title: "Other",
         content: [
-            { title: "Mental Health", link: "mental" },
-            { title: "Food Pantry", link: "food" },
-            { title: "Shelters", link: "shelters" },
-            { title: "Clothing", link: "clothing" },
+            { title: "Mental Health", link: "/events/mental" },
+            { title: "Food Pantry", link: "/events/food" },
+            { title: "Shelters", link: "/events/shelters" },
+            { title: "Clothing", link: "/events/clothing" },
         ],
     },
 ];
