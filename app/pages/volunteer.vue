@@ -35,32 +35,13 @@
 </template>
 
 <script setup>
-import { getPostsByCategory } from "../../services/misc.ts";
+import { getPosts } from "../../services/misc.ts";
 import { ref, onMounted } from "vue";
 
-const myData = ref([
-    {
-        title: "Binghamton Animal Shelter",
-        description:
-            "We are need of volunteers who can help us with our animals",
-        address: "address1",
-        id: "event-id1",
-    },
-    {
-        title: "Binghamton Food Pantry",
-        description:
-            "We are need of volunteers who can help us with our food pantry",
-        address: "address2",
-        id: "event-id2",
-    },
-]);
+const myData = ref([]);
 
 onMounted(async () => {
-    try {
-        this.myData = await getPostsByCategory(`${this.$route.query.q}`);
-    } catch (error) {
-        console.log(`Error fetching posts: ${error}`);
-    }
+    myData.value = await getPosts();
 });
 </script>
 

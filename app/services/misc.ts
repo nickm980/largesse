@@ -1,11 +1,6 @@
 async function getPosts() {
-    return [
-        {
-            title: "Binghamton Animal Shelter",
-            description:
-                "We are in need of some volunteers who can help us take care of these animals",
-        },
-    ];
+    const response = await fetch("http://localhost:8081/api/v1/event/");
+    return await response.json();
 }
 
 async function getPost(id: string) {
